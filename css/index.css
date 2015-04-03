@@ -1,0 +1,65 @@
+body {
+	background: url(../images/Background.jpg);
+    background-size: 100%;
+}
+
+.navbar-inverse.affix {
+	margin-left: 2%;
+}
+
+.panel {
+	opacity: 0.8;
+	z-index: 1;
+}
+
+.panel.panel-inverse{
+	background-color: #036589;
+	color: #ffffff;
+}
+
+.panel-heading{
+	background-color: #002431;
+	color: #ffffff;
+}
+
+#Philmont {
+	width: 1100px;
+	height: 500px;
+	overflow: hidden;
+	z-index: 3;
+	opacity: 1;
+}
+#Pimg {
+	width: 1536px;
+	height: 1152px;
+	margin-left: -30px;
+	margin-top: -200px;
+	z-index: 2;
+	opacity: 1;
+}
+
+#Sword {
+	width: 225px;
+	height: 240px;
+	float: right;
+}
+
+/* unvisited link */
+a:link {
+    color: #82ceea;
+}
+
+/* visited link */
+a:visited {
+    color: #12b6f2;
+}
+
+/* mouse over link */
+a:hover {
+    color: #5690a5;
+}
+
+/* selected link */
+a:active {
+    color: #5690a5;
+}
