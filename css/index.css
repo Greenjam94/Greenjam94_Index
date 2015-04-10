@@ -7,6 +7,10 @@ body {
 	margin-left: 2%;
 }
 
+.container {
+	margin-top: 80px;
+}
+
 .panel {
 	opacity: 0.8;
 	z-index: 1;

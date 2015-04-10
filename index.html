@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -26,7 +26,16 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Home<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#interest">Interests</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <li class="divider"></li>
+            <li><a href="index.html">Top of page</a></li>
+          </ul>
+        </li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="http://blog.greenjam94.me">Blog</a></li>
           <li><a href="http://greenjam94.github.io">Github</a></li> 
@@ -38,16 +47,15 @@
 
   <div class="navbar-inverse affix">
     <ul class="nav">
-      <li><a href="#about">About me</a></li>
-      <li><a href="#interest">Interests</a></li>
-      <li><a href="#contact">Contact Me</a></li>
+      
     </ul>
   </div>
 
   <div class="container">
+    <a name="about"></a>
     <div class="panel panel-inverse">
       <div class="panel-heading">
-        <h3 class="panel-title">About Me</h3><a name="about"></a>
+        <h3 class="panel-title">About Me</h3>
       </div>
       <div class="panel-body">
         <h4>Hello There,</h4>
@@ -63,9 +71,10 @@
       </div>
     </div>
 
+    <a name="interest"></a>
     <div class="panel panel-inverse">
       <div class="panel-heading">
-        <h3 class="panel-title">Interests</h3><a name="interest"></a>
+        <h3 class="panel-title">Interests</h3>
       </div>
       <div class="panel-body">
         <h4>Scouting / Outdoors</h4>
@@ -101,9 +110,10 @@
       </div>
     </div>
 
+    <a name="contact"></a>
     <div class="panel panel-inverse">
       <div class="panel-heading">
-        <h3 class="panel-title">Contact Me</h3><a name="contact"></a>
+        <h3 class="panel-title">Contact Me</h3>
       </div>
       <div class="panel-body">
         <p>Like my site? Want to know more or are interested in hiring me for your own website? Contact me here</p>
