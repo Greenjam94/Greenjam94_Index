@@ -86,7 +86,7 @@ function authAttempts() {
 			$success=mysqli_fetch_row($successes);
 			$fail=mysqli_fetch_row($fails);
 
-			$ratio = $success[0]."/".$fail[0];
+			$ratio = array($success[0], $fail[0]);
 		}
 
 		echo json_encode($ratio);

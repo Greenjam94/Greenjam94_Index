@@ -47,7 +47,7 @@
   </nav>
 
   <div class="container">
-    <div class="alert alert-success alert-dismissible" role="alert">
+    <div class="alert alert-success alert-dismissible fade in" id="connection-alert"role="alert">
       Connected successfully
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -56,9 +56,37 @@
 
     <div class="panel panel-inverse">
       <div class="panel-heading">
+        <h3 class="panel-title">Attempted Authentications</h3>
+      </div>
+      <div class="panel-body" id="auth-attempts">
+        <img src="images/loading.gif" id="auth-loading">
+        <div id="auth-content" style="display:none">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-inverse">
+      <div class="panel-heading">
         <h3 class="panel-title">SSH CLIENTS & COUNT</h3>
       </div>
       <div class="panel-body" id="ssh-clients">
+        <img src="images/loading.gif" id="client-loading">
+        <div id="client-content" style="display:none">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>SSH Clients</th>
+                <th>Count</th>
+              </tr>
+            </thead>
+            <tbody id='client-rows'>
+              <tr>
+                <td id='cca1'></td>
+                <td id='ccb1'></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -67,14 +95,9 @@
         <h3 class="panel-title">DISTINCT IP ADDRESSES</h3>
       </div>
       <div class="panel-body" id="ip-addresses">
-      </div>
-    </div>
-
-    <div class="panel panel-inverse">
-      <div class="panel-heading">
-        <h3 class="panel-title">Attempted Authentications</h3>
-      </div>
-      <div class="panel-body" id="auth-attempts">
+        <img src="images/loading.gif" id="ip-loading">
+        <div id="ip-content" style="display:none">
+        </div>
       </div>
     </div>
 
@@ -83,6 +106,23 @@
         <h3 class="panel-title">Attempted Commands</h3>
       </div>
       <div class="panel-body" id="cmd-attempts">
+        <img src="images/loading.gif" id="cmd-loading">
+        <div id="cmd-content" style="display:none">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>SSH Clients</th>
+                <th>Count</th>
+              </tr>
+            </thead>
+            <tbody id='cmd-rows'>
+              <tr>
+                <td id='cmda1'></td>
+                <td id='cmdb1'></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>

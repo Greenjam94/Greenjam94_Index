@@ -5,10 +5,18 @@ function getSSHclients() {
          type: 'post',
          success: function(res) {
                       //console.log(res);
+                      count = 1;
                       for (var key in res) {
                       	//console.log();
-                      	document.getElementById('ssh-clients').insertAdjacentHTML('beforeend', "SSH Client: "+key+" Times Used: "+res[key]+"<br>");
+                        document.getElementById('cca'+count.toString()).innerHTML = key;
+                      	document.getElementById('ccb'+count.toString()).innerHTML = res[key];
+                        count++;
+                        document.getElementById('client-rows').insertAdjacentHTML('beforeend',
+                          "<tr><td id='cca"+count+"'></td><td id='ccb"+count+"'></td></tr>");
+                        
                       }
+                  $('#client-loading').hide();
+                  $('#client-content').show();
                   }
 	});
 }
@@ -23,9 +31,11 @@ function getIPaddresses() {
                       //console.log(res);
                       for (var key in res) {
                       	//console.log(res[key]);
-                      	document.getElementById('ip-addresses').insertAdjacentHTML('beforeend', res[key]+"    <span id="+res[key]+"_geo></span><br>");
+                      	document.getElementById('ip-content').insertAdjacentHTML('beforeend', res[key]+"    <span id="+res[key]+"_geo></span><br>");
                       	getIPgeoInfo(res[key]);
                       }
+                      $('#ip-loading').hide();
+                      $('#ip-content').show();
                   }
 	});
 }
@@ -37,8 +47,11 @@ function getAuthAttempts() {
          dataType: "json",
          type: 'post',
          success: function(res) {
-					//console.log(res);
-					document.getElementById('auth-attempts').insertAdjacentHTML('beforeend', res+"<br>");
+    					        //console.log(res);
+                      percent = (((parseInt(res[0]) / parseInt(res[1]))*100).toFixed(2)).toString();
+    					        document.getElementById('auth-content').insertAdjacentHTML('beforeend', res[0]+"/"+res[1]+" "+percent+"%<br>");
+                      $('#auth-loading').hide();
+                      $('#auth-content').show();
                   }
 	});
 }
@@ -50,11 +63,18 @@ function getCmdAttempts() {
          dataType: "json",
          type: 'post',
          success: function(res) {
-					//console.log(res);
+                      //console.log(res);
+                      count = 1;
                       for (var key in res) {
                       	//console.log();
-                      	document.getElementById('cmd-attempts').insertAdjacentHTML('beforeend', "Command: "+key+" Result: "+res[key]+"<br>");
+                        document.getElementById('cmda'+count.toString()).innerHTML = key;
+                      	document.getElementById('cmdb'+count.toString()).innerHTML = res[key];
+                        count++;
+                        document.getElementById('cmd-rows').insertAdjacentHTML('beforeend',
+                          "<tr><td id='cmda"+count+"'></td><td id='cmdb"+count+"'></td></tr>");
                       }
+                      $('#cmd-loading').hide();
+                      $('#cmd-content').show();
                   }
 	});
 }
@@ -62,11 +82,14 @@ function getCmdAttempts() {
 
 function getIPgeoInfo(ip) {
 	$.get("http://ipinfo.io/"+ip+"/json", function(data, status){
-        console.log("Data: " + data + "\nStatus: " + status);
+        //console.log("Data: " + data + "\nStatus: " + status);
         document.getElementById(ip+"_geo").innerHTML = data['country'];
     });
 }
 
+setTimeout(function(){
+    $('#connection-alert').alert('close')
+}, 2000);
 getSSHclients();
 getIPaddresses();
 getAuthAttempts();
