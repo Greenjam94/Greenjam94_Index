@@ -3,14 +3,14 @@ html {
 }
 body {
 	background-color: #ccc;
-	padding: 50px;
+	padding: 50px; /* Keep content from being under the navbar */
 }
 
 #socials {
 	text-align: center;
 }
 
-/* Wrapper */
+/* Social Media Icons */
 .icon-button {
 	background-color: white;
 	border-radius: 3.6rem;
