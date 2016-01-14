@@ -25,6 +25,10 @@ body {
 	color: #ffffff;
 	opacity: 0.8;
 }
+.panel-footer{
+	background-color: #002431;
+	color: #ffffff;
+}
 
 #Philmont {
 	width: 100%;
