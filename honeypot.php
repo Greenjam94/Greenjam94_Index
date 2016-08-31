@@ -2,10 +2,10 @@
 
 function connect() {
 	//Database info
-	$servername = "104.236.66.19";
-	$username = "jgreen";
-	$password = "mysqlhoney";
-	$database = "cowrie";
+	$servername = "";
+	$username = "";
+	$password = "";
+	$database = "";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $database);
