@@ -1,76 +1,44 @@
 body {
-	background: url(../images/Background.jpg);
-    background-size: 100%;
+    background-color: #000;
+    color: #fff;
 }
 
-.navbar-inverse.affix {
-	margin-left: 2%;
+#header {
+    border: 2px solid #BFBFBF;
 }
 
-.container {
-	margin-top: 30px;
+#sidebar {
+    border: 2px solid #BFBFBF;
+    width: 15%;
+    float: left;
+    height: 700px;
+}
+#sidebar li {
+    list-style-type: none;
 }
 
-.panel {
-	background: rgba(3, 101, 137, 0.8);
-	z-index: 1;
+#console {
+    border: 2px solid #BFBFBF;
+    font-family: courier, monospace;
+    margin-left: 15%;
+    font-size:14px;
+    height: 700px;
+    padding-left: 5px;
 }
 
-.panel.panel-inverse{
-	color: #ffffff;
+a {
+    color: #0bc;
+    text-decoration: none;
 }
 
-.panel-heading{
-	background-color: #002431;
-	color: #ffffff;
-	opacity: 0.8;
-}
-.panel-footer{
-	background-color: #002431;
-	color: #ffffff;
+#a {
+    color: #0f0;
 }
 
-#twitter-widget-0 {
-	width: 100%;
+#c {
+    color: #0bc;
 }
 
-#Philmont {
-	width: 100%;
-	height: 500px;
-	overflow: hidden;
-	z-index: 3;
-	opacity: 1;
-}
-#Pimg {
-	width: 1536px;
-	height: 1152px;
-	margin-top: -200px;
-	z-index: 2;
-	opacity: 1;
-}
-
-#Sword {
-	width: 225px;
-	height: 240px;
-	float: right;
-}
-
-/* unvisited link */
-a:link {
-    color: #82ceea;
-}
-
-/* visited link */
-a:visited {
-    color: #12b6f2;
-}
-
-/* mouse over link */
-a:hover {
-    color: #5690a5;
-}
-
-/* selected link */
-a:active {
-    color: #5690a5;
+#b {
+    color: #ff0096;
 }

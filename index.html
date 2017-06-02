@@ -1,171 +1,50 @@
-<!DOCTYPE html>
+
+<!--
+Copyright (c) 2011 Sam Phippen <samphippen@googlemail.com>
+Modified by James Green 2017
+ 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+ 
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+ 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
 <html>
+<head>
+  <title>SSH: connected to greenjam94.me</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/googleAnalytics.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="header">
+<h1>Greenjam94.me</h1>
+</div>
+<div id="sidebar">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="https://blog.greenjam94.me">Blog</a></li>
+  <li><a href="mailto:greenjam94@gmail.com">Email</a></li>
+  <br>
+  <li><a href="https://twitter.com/greenjam94">Twitter</a></li>
+  <li><a href="https://facebook.com/greenjam94">Facebook</a></li>
+  <li><a href="https://linkedin.com/in/greenjam94">Linkedin</a></li>
+</ul>
+</div>
+<div id="console"></div>
 
-  <head>
-    <title>Greenjam94</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <!-- Social media links -->
-    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
-    <!-- Custom CSS Links-->
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-
-  <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="https://greenjam94.me">Greenjam94.me</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="https://blog.greenjam94.me">Blog</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="panel panel-inverse">
-            <div class="panel-heading">
-              <h3 class="panel-title">About Me</h3>
-            </div>
-            <div class="panel-body">
-              <h4>Hello There,</h4>
-              <p>I'm James Green, or Greenjam94. Thanks to friends from Circle Ciy Con, some call me Infosec Captain
-                America. I've been interested in security I was young. That all changed my freshman year at MSU,
-                and it's hard to track all the things that I have done. This page is to let you know a little more about
-                me. Please visit my <a href="http://blog.greenjam94.me">blog</a> to learn more about what I do in Infosec.
-              </p>
-
-              <p>In the spring of 2015 there was a class that required me to write a weekly blog posts and the topic I
-                chose was information security. I try to write monthly now, but that doesn't always happen. Recently a
-                lot of the posts I write are related to cons I go to or what I've learned for work.
-              </p>
-            </div>
-          </div>
-
-            <div class="panel panel-inverse">
-              <div class="panel-heading">
-                <h3 class="panel-title">Contact Me</h3>
-              </div>
-              <div class="panel-body" id="socials">
-                <div>
-                  <a href="https://twitter.com/Greenjam94" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
-                  <a href="https://facebook.com/greenjam94" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
-                  <a href="https://plus.google.com/+JamesGreen_Greenjam94/" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
-                </div>
-                <p>Like my site? Want to know more or get in touch?<br>
-                  <a href="mailto:greenjam94@gmail.com">E-mail me</a><br>
-                  <a href="http://misec.herokuapp.com">Join me on #misec slack</a>
-                </p>
-              </div>
-            </div>
-
-          <a class="twitter-timeline" href="https://twitter.com/Greenjam94" data-widget-id="687460945124175873">Tweets by @Greenjam94</a>
-        </div>
-
-        <div class="col-md-8">
-          <div class="panel panel-inverse">
-            <div class="panel-heading">
-              <h3 class="panel-title">Interests</h3>
-            </div>
-            <div class="panel-body">
-              <h4>Hacking / Infosec</h4>
-              <p>My freshman year at MSU, I found a group called "Defense against the dark arts". It was a group of
-                upperclassmen that got together and reviewed some basic hacking techniques like DDOS, MITM, and more.
-                That group introduced me to BackTrack and Kali. This started me down the path towards information
-                security. Unfortunately, most group members graduated the semester I joined, and the club soon disbanded
-                afterwards. In my junior year, I joined a new group called "Spartan Hackers". They put on Spartahack,
-                a collegiate level hackathon that is a 36 hour coding competition. It had hacking in the name so I
-                jumped onboard. While it's not infosec, it is a good way to show off development skills.
-              </p>
-              <p>I found an awesome group in Michigan called <a href="https://michsec.org/">#MiSec</a>. They're a bunch
-                of security people who talk at cons and have a lot of fun. After meeting some of them at a bar, I was
-                picking locks and attempting to help write code for projects by the end of the night. #MiSec found me
-                because I volunteered at <a href="https://grrcon.com/">GrrCon '15</a>.
-              </p>
-              <p>I gave my first infosec talk at a spartan hackers meeting. I went over some common OWASP top ten web
-                vulnerabilities that could be tested in OWASP's Broken Web App. I've given more talks since then about web
-                vulnerabilities and how to prevent them. I currently am doing Application Security, which is why a lot
-                of the talks I've given are around websites and OWASP.
-              </p>
-
-              <h4 style="clear:both;">Developing</h4>
-              <p>Since I was in middle school, I knew that I wanted to get a job with computers. By the time I was in
-                high school, I narrowed it down to something with programming a computer. It was all the hacking movies
-                and big salary jobs that were being offered. However the only class offered at my high school was a
-                basic web design class that showed us how to make sites with Dreamweaver.
-              </p>
-              <p>After coming to college, my abilities soared. Thanks to classes, work, and personal projects I can now
-                do so much better. I know specific languages like Python, C++, Java, and PHP. I've made programs that run
-                in IDEs, web applications, bash, and more. I'm always trying to learn more. Currently web development is
-                taking up most of my time since it's what I do for school and personal projects. I'm trying to expand my
-                python skills since it is a popular language in the infosec world.</p>
-
-              <h4>Martial Arts<a name="contact"></a><img src="images/Sword.jpg" id="Sword"></h4>
-              <p>I've been studying martial arts since I was in the third grade. I've earned my second degree black belt
-                in Tang Soo Do while studying at the <a href="https://www.worldclassinstituteofmartialarts.com/">World
-                  Class Institute of Martial Arts</a>. The road to my black belt was harder than I expected. I even quit
-                for three years before returning to prove to myself that I could reach this goal. Looking back, and am
-                proud to see how much I've changed, both physically and mentally.
-              </p>
-              <p>In highscool, I wrestled for three years. Transitioning from the grappling of Tang Soo Do to wrestling
-                was pretty difficult. My first year I think I went without a single win. However I kept at
-                it, conditioning made me a lot stronger and by my senior year, I made varsity. I won enough matches that
-                year to get my varsity letter and couldn't be happier about it.
-              </p>
-              <p>I have also experimented with Tae Kwon Do, Judo, and mixed martial arts (MMA) while studying at MSU.
-                While I haven't been able to train outside of clubs and classes, I have learned a lot in my last three
-                years. MSUMMA was the first place I picked up sparring/boxing. Judo was where I adapted some basic
-                take-down knowledge into precise techniques.
-              </p>
-
-              <h4>Scouting / Outdoors</h4>
-              <p>Before I came to college, I was really into scouting. I earned the rank of eagle scout my last year of
-                high school. My favorite part of scouts was the high adventure trips, I've climbed over 12 different
-                mountains across the United States. I was also the Senior Patrol Leader ("President") for a year and
-                have many years of leadership experience from past positions. The picture below is from my second trip
-                to Philmont where I was the leader on the trek.
-              </p>
-              <p id="Philmont"><img src="images/Philmont_2012.jpg" id="Pimg"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <!-- Twitter Widget -->
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
-    <!-- Google Analytics -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-65722430-1', 'auto');
-    ga('send', 'pageview');
-
-    </script>
-  </body>
-
-</html>
+</body>
+</html> 

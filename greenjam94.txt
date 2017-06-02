@@ -1,0 +1,40 @@
+Login as: guest
+
+######################################################################################################################
+# ALERT!
+# You are entering into a secured area!
+# Your IP, Login Time, Username has been noted and has been sent to the server administrator!
+# This service is restricted to authorized users only. All activities on this system are logged.
+# Unauthorized access will be fully investigated and reported to the appropriate lawl enforcement agencies.
+#####################################################################################################################
+
+<span id="a">guest@localhost</span>:<span id="b">~</span><span id="c">$</span> echo "Welcome to my website"<!-- laglaglaglaglaglaglaglaglaglaglaglag -->
+<span id="a">guest@localhost</span>:<span id="b">~</span><span id="c">$</span>
+<span id="a">guest@localhost</span>:<span id="b">~</span><span id="c">$</span> cd ../admin/more
+-bash: cd: ../admin/more: Permission denied
+<span id="a">guest@localhost</span>:<span id="b">~</span><span id="c">$</span> su root
+[su] password for root: <!-- laglaglaglaglaglaglaglaglaglaglaglag -->***<!-- laglaglag -->**<!-- lag -->**
+<span id="a">root@localhost</span>:<span id="b">~</span><span id="c">$</span> cd ../admin/more
+<span id="a">root@localhost</span>:<span id="b">~</span><span id="c">$</span> cat school.sh
+#!/bin/bash
+for degree in college;
+do
+    echo "BS: Media and Information"
+    echo "Minor in Computer Science"
+done
+<span id="a">root@localhost</span>:<span id="b">~</span><span id="c">$</span>more work.exp
+While in college I worked at <a href="#">Matrix</a> as a student developer. I wrote websites used by some of the colleges at the university. After graduating, my first full time job was at <a href="#">Vertafore</a>. Application Security was my focus. I worked on securing our applications by reviewing scan results and reporting vulnerabilities to development teams to resolve them. Currently I'm
+:<!-- laglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglaglag -->
+^C
+<span id="a">root@localhost</span>:<span id="b">~</span><span id="c">$</span> cd /var
+<span id="a">root@localhost</span>:<span id="b">~</span><span id="c">$</span> tails log/messages
+I hope you enjoyed this fun with terminal
+I'd like you to visit my blog, it has a lot of good posts about my experience in information security
+The link is on the left. Or you can <a href="https://blog.greenjam94.me">click here</a>
+<span id="a">root@localhost</span>:<span id="b">~</span><span id="c">$</span> ./installBackdoor.exe
+Downloading: <!-- laglaglaglaglaglaglaglaglaglaglaglag --> 100%
+Installing: <!-- laglaglaglaglaglaglaglaglaglaglaglag --> 100%
+Complete: client added to file /usr/hacker/targetz
+<span id="a">root@localhost</span>:<span id="b">~</span><span id="c">$</span> exit
+logout
+Connection to localhost closed.
