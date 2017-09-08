@@ -34,7 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="container">
     <div class="text-center">
+	<audio autoplay="" controls="" loop="" preload="">
+            <source src="audio/babyGroot.mp3" type="audio/mp3"></source>
+            Your browser does not support the audio element.
+        </audio>
+	<p></p>
         <iframe src="https://giphy.com/embed/F9hQLAVhWnL56" width="480" height="319" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <br>
+
 	<h1>Success!</h1>
     </div>
 </div>
